@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- Basic -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- Mobile Metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <!-- Site Metas -->
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+  <link rel="shortcut icon" href="{{ url_for('static', filename='images/HD_logo.png') }}" type="">
+
+  <title> R7 B Face Recognization </title>
+
+  <!-- bootstrap core css -->
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/bootstrap.css') }}" />
+
+  <!-- fonts style -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+
+  <!-- owl slider stylesheet -->
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+
+  <!-- font awesome style -->
+  <link href="{{ url_for('static', filename='css/font-awesome.min.css') }}" rel="stylesheet" />
+
+  <!-- Custom styles for this template -->
+  <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet" />
+  <!-- responsive style -->
+  <link href="{{ url_for('static', filename='css/responsive.css') }}" rel="stylesheet" />
+
+</head>
+
+
+<body>
+
+  <div class="hero_area">
+
+    <div class="hero_bg_box">
+      <div class="bg_img_box">
+        <img src="{{ url_for('static', filename='images/hero-bg.png') }}" alt="hero-bg.png">
+      </div>
+    </div>
+
+    <!-- header section strats -->
+    <header class="header_section">
+      <div class="container-fluid">
+        <nav class="navbar navbar-expand-lg custom_nav-container ">
+          <a class="navbar-brand" href="index.html">
+            <span>
+              FINAL YEAR PROJECT 
+            </span>
+          </a>
+
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class=""> </span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav  ">
+              <li class="nav-item active">
+                <a class="nav-link" href="">Home <span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="service.html">Services</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="team.html">Team</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <!-- end header section -->
+    <!-- slider section -->
+    <section class="slider_section ">
+      <div id="customCarousel1" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="container ">
+              <div class="row">
+                <div class="col-md-6 ">
+                  <div class="detail-box">
+                    <h1>
+                      Face Recognition<br>
+                      Using Image
+                    </h1>
+                    <p>
+                      Instantly identify faces with image uploads, bridging connections seamlessly.
+                    </p>
+                    <div class="btn-box">
+                       <a href="/static/Research_Paper.pdf" class="btn1" target="_blank">
+                        Read More
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="img-box">
+                    <img src="{{ url_for('static', filename='images/slider-img.png') }}" alt="">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item ">
+            <div class="container ">
+              <div class="row">
+                <div class="col-md-6 ">
+                  <div class="detail-box">
+                    <h1>
+                      Face Recognition<br>
+                      Using Video
+                    </h1>
+                    <p>
+                      A seamless solution in sight, Efficiently identifying faces, harnessing technology's might.
+                    </p>
+                    <div class="btn-box">
+                      <a href="/static/Research_Paper.pdf" class="btn1" target="_blank">
+                        Read More
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="img-box">
+                    <img src="{{ url_for('static', filename='images/slider-img.png') }}" alt="">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="container ">
+              <div class="row">
+                <div class="col-md-6 ">
+                  <div class="detail-box">
+                    <h1>
+                      Real Time <br>
+                      Face Recognition
+                    </h1>
+                    <p>
+                      Real-time face recognition, as live streams unfold, Efficiently identifying faces, with precision untold.
+                    </p>
+                    <div class="btn-box">
+                      <a href="/static/Research_Paper.pdf" class="btn1" target="_blank">
+                        Read More
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="img-box">
+                    <img src="{{ url_for('static', filename='images/slider-img.png') }}" alt="">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <ol class="carousel-indicators">
+          <li data-target="#customCarousel1" data-slide-to="0" class="active"></li>
+          <li data-target="#customCarousel1" data-slide-to="1"></li>
+          <li data-target="#customCarousel1" data-slide-to="2"></li>
+        </ol>
+      </div>
+
+    </section>
+    <!-- end slider section -->
+  </div>
+
+
+  <!-- service section -->
+
+  <section class="service_section layout_padding">
+    <div class="service_container">
+      <div class="container ">
+        <div class="heading_container heading_center">
+          <h2>
+            Our <span>Services</span>
+          </h2>
+          <p>
+            We offers three face recognition services as per your needs:<br>
+            <br>
+            <ul>
+              <li>Image recognition: pinpoint accuracy for static visuals.</li>
+              <li>Video recognition: seamless analysis for uploaded videos.</li>
+              <li>Real-time face recognition: instant identification for live streams.</li>
+            </ul>
+        </div>
+        <div class="row">
+          <div class="col-md-4 ">
+            <div class="box ">
+              <div class="img-box">
+                <img src="{{ url_for('static', filename='images/s1.png') }}" alt="">
+              </div>
+              <div class="detail-box">
+                <h5>
+                  <br>
+                  Image Recognition
+                  <br>
+                </h5>
+                <p>
+                  <br>
+                  At our platform, you can conveniently upload a photo and have faces recognized. Our user-friendly interface allows you to effortlessly select and upload your desired image.
+                  <br>
+                </p>
+                <a href="image_recognition.html">
+                  Start Now
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 ">
+            <div class="box ">
+              <div class="img-box">
+                <img src="{{ url_for('static', filename='images/s2.png') }}" alt="">
+              </div>
+              <div class="detail-box">
+                <h5>
+                  <br>
+                  Video Recognition
+                </h5>
+                <p>
+                  <br>
+                  At our platform, you can conveniently upload a video and receive face recognition outputs tailored to your needs. Our intuitive interface simplifies the process, upload your video content.
+                  <br>
+                </p>
+                <a href="video_recognition.html">
+                  Start Now
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 ">
+            <div class="box ">
+              <div class="img-box">
+                <img src="{{ url_for('static', filename='images/s3.png') }}" alt="">
+              </div>
+              <div class="detail-box">
+                <h5>
+                  <br>
+                  Real-Time Recognition
+                </h5>
+                <p>
+                  <br>
+                  Experience real-time face recognition technology at our platform. With our cutting-edge system, you can instantly identify individuals as they appear on screen.
+                  <br>
+                </p>
+                <a href="/live">
+                  Start Now
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- end service section -->
+
+  <!-- team section -->
+  <section class="team_section layout_padding">
+    <div class="container-fluid">
+      <div class="heading_container heading_center">
+        <h2 class="">
+          Our <span> Team</span>
+        </h2>
+      </div>
+
+      <div class="team_container">
+        <div class="row">
+          <div class="col-lg-3 col-sm-6">
+            <div class="box ">
+              <div class="img-box">
+                <img src="{{ url_for('static', filename='images/team-1.jpg') }}" class="img1" alt="">
+              </div>
+              <div class="detail-box">
+                <h5>
+                 Arpit Meshram
+                </h5>
+                <p>
+                  Project Manager
+                </p>
+              </div>
+              <div class="social_box">
+                <a href="#">
+                  <i class="fa fa-facebook" aria-hidden="true"></i>
+                </a>
+                <a href="#">
+                  <i class="fa fa-twitter" aria-hidden="true"></i>
+                </a>
+                <a href="#">
+                  <i class="fa fa-linkedin" aria-hidden="true"></i>
+                </a>
+                <a href="#">
+                  <i class="fa fa-instagram" aria-hidden="true"></i>
+                </a>
+                <a href="#">
+                  <i class="fa fa-youtube-play" aria-hidden="true"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-sm-6">
+            <div class="box ">
+              <div class="img-box">
+                <img src="{{ url_for('static', filename='images/team-2.jpg') }}" class="img1" alt="">
+              </div>
+              <div class="detail-box">
+                <h5>
+                  Hindav Deshmukh
+                </h5>
+                <p>
+                  Software Developer
+                </p>
+              </div>
+              <div class="social_box">
+                <a href="#">
+                  <i class="fa fa-facebook" aria-hidden="true"></i>
+                </a>
+                <a href="#">
+                  <i class="fa fa-twitter" aria-hidden="true"></i>
+                </a>
+                <a href="#">
+                  <i class="fa fa-linkedin" aria-hidden="true"></i>
+                </a>
+                <a href="#">
+                  <i class="fa fa-instagram" aria-hidden="true"></i>
+                </a>
+                <a href="#">
+                  <i class="fa fa-youtube-play" aria-hidden="true"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-sm-6">
+            <div class="box ">
+              <div class="img-box">
+                <img src="{{ url_for('static', filename='images/team-3.jpg') }}" class="img1" alt="">
+              </div>
+              <div class="detail-box">
+                <h5>
+                  Priya Khivasara
+                </h5>
+                <p>
+                  Quality Assurance
+                </p>
+              </div>
+              <div class="social_box">
+                <a href="#">
+                  <i class="fa fa-facebook" aria-hidden="true"></i>
+                </a>
+                <a href="#">
+                  <i class="fa fa-twitter" aria-hidden="true"></i>
+                </a>
+                <a href="#">
+                  <i class="fa fa-linkedin" aria-hidden="true"></i>
+                </a>
+                <a href="#">
+                  <i class="fa fa-instagram" aria-hidden="true"></i>
+                </a>
+                <a href="#">
+                  <i class="fa fa-youtube-play" aria-hidden="true"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-sm-6">
+            <div class="box ">
+              <div class="img-box">
+                <img src="{{ url_for('static', filename='images/team-4.jpg') }}" class="img1" alt="">
+              </div>
+              <div class="detail-box">
+                <h5>
+                  Vishakha Tandulkar
+                </h5>
+                <p>
+                  Technical Writer
+                </p>
+              </div>
+              <div class="social_box">
+                <a href="#">
+                  <i class="fa fa-facebook" aria-hidden="true"></i>
+                </a>
+                <a href="#">
+                  <i class="fa fa-twitter" aria-hidden="true"></i>
+                </a>
+                <a href="#">
+                  <i class="fa fa-linkedin" aria-hidden="true"></i>
+                </a>
+                <a href="#">
+                  <i class="fa fa-instagram" aria-hidden="true"></i>
+                </a>
+                <a href="#">
+                  <i class="fa fa-youtube-play" aria-hidden="true"></i>
+                </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  </section>
+  
+
+  <!-- client section -->
+
+  <section class="client_section layout_padding">
+    <div class="container">
+      <div class="heading_container heading_center psudo_white_primary mb_45">
+        <h2>
+          What says our <span>Customers</span>
+        </h2>
+      </div>
+      <div class="carousel-wrap ">
+        <div class="owl-carousel client_owl-carousel">
+          <div class="item">
+            <div class="box">
+              <div class="img-box">
+                <img src="{{ url_for('static', filename='images/client1.jpg') }}" alt="" class="box-img">
+              </div>
+              <div class="detail-box">
+                <div class="client_id">
+                  <div class="client_info">
+                    <h6>
+                      Amit Khandare
+                    </h6>
+                    <p>
+                      JDIET, Yavataml
+                    </p>
+                  </div>
+                  <i class="fa fa-quote-left" aria-hidden="true"></i>
+                </div>
+                <p>
+                  I'm not in the movie industry, but your face recognition services have still made a significant impact on my life. Whether it's unlocking my phone with a glance or automatically sorting my family photos, it's amazing how seamlessly this technology integrates into everyday tasks. </p>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="box">
+              <div class="img-box">
+                <img src="{{ url_for('static', filename='images/client2.jpg') }}" alt="" class="box-img">
+              </div>
+              <div class="detail-box">
+                <div class="client_id">
+                  <div class="client_info">
+                    <h6>
+                      Gaurav Savaimul
+                    </h6>
+                    <p>
+                      JDIET, Yavataml
+                    </p>
+                  </div>
+                  <i class="fa fa-quote-left" aria-hidden="true"></i>
+                </div>
+                <p>
+                  Working in the entertainment industry, we deal with vast amounts of video footage daily. Thanks to your video recognition service, we can efficiently analyze auditions and past performances, streamlining our casting process like never before. </p>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="box">
+              <div class="img-box">
+                <img src="{{ url_for('static', filename='images/client1.jpg') }}" alt="" class="box-img">
+              </div>
+              <div class="detail-box">
+                <div class="client_id">
+                  <div class="client_info">
+                    <h6>
+                      Amit Khandare
+                    </h6>
+                    <p>
+                      JDIET, Yavataml
+                    </p>
+                  </div>
+                  <i class="fa fa-quote-left" aria-hidden="true"></i>
+                </div>
+                <p>
+                  Real-time face recognition during live shoots has revolutionized how we manage our sets. Thanks to your team so we can instantly identify actors, ensuring smooth continuity and minimizing downtime. It's a game-changer for production efficiency. </p>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="box">
+              <div class="img-box">
+                <img src="{{ url_for('static', filename='images/client2.jpg') }}" alt="" class="box-img">
+              </div>
+              <div class="detail-box">
+                <div class="client_id">
+                  <div class="client_info">
+                    <h6>
+                      Gaurav Savaimul
+                    </h6>
+                    <p>
+                      JDIET, Yavataml
+                    </p>
+                  </div>
+                  <i class="fa fa-quote-left" aria-hidden="true"></i>
+                </div>
+                <p>
+                  Kudos to your team for their tailor-made face recognition solutions for the movie industry! Their services have simplified our casting process, allowing us to focus more on creative aspects knowing that we have reliable tools to assist us in finding the right talent. </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- end client section -->
+
+
+  <!-- info section -->
+
+  <section class="info_section layout_padding2">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 col-lg-3 mx-auto text-center">
+          <div class="info_contact">
+            <h4>Address</h4>
+            <div class="contact_link_box">
+              <a href="https://maps.app.goo.gl/tnKoDVq7tafELXLj7">
+                <i class="fa fa-map-marker" aria-hidden="true"></i>
+                <span>Jdiet Yavatmal</span>
+              </a>
+              <a href="https://wa.link/l9uk6e">
+                <i class="fa fa-whatsapp" aria-hidden="true"></i>
+                <span>Message +91 7083376602</span> 
+              </a>
+              <a href="mailto:hindavd@gmail.com?subject=Query%20Regarding%20your%20Final%20year%20Project%20on%20Face%20Recognition.">    
+                <i class="fa fa-envelope" aria-hidden="true"></i>
+                <span>hindavd@gmail.com</span>
+              </a>
+            </div>
+            <div class="info_social">
+              <a href="">
+                <i class="fa fa-facebook" aria-hidden="true"></i>
+              </a>
+              <a href="">
+                <i class="fa fa-twitter" aria-hidden="true"></i>
+              </a>
+              <a href="">
+                <i class="fa fa-linkedin" aria-hidden="true"></i>
+              </a>
+              <a href="">
+                <i class="fa fa-instagram" aria-hidden="true"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3 mx-auto text-center">
+          <div class="info_detail">
+            <h4>About</h4>
+            <p>
+              This application is basically a one-time model for predictions from images or video. Enable live tracking of movie characters for automated classification. Also utilize the system for real-time testing with live video or images of trained characters.
+
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- end info section -->
+
+  <!-- footer section -->
+  <section class="footer_section">
+    <div class="container">
+      <p>
+        &copy; <span id="displayYear"></span> All Rights Reserved By
+        <a href="https://www.linkedin.com/in/hindav-deshmukh-811096267/">Hindav Deshmukh</a>
+      </p>
+    </div>
+  </section>
+  <!-- footer section -->
+
+<!-- jQery -->
+<script type="text/javascript" src="{{ url_for('static', filename='js/jquery-3.4.1.min.js') }}"></script>
+<!-- popper js -->
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+  integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+</script>
+<script type="text/javascript" src="{{ url_for('static', filename='js/jquery-3.4.1.min.js') }}"></script>
+<!-- popper js -->
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+</script>
+<!-- bootstrap js -->
+<script type="text/javascript" src="{{ url_for('static', filename='js/bootstrap.js') }}"></script>
+<!-- owl slider -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js">
+</script>
+<!-- custom js -->
+<script type="text/javascript" src="{{ url_for('static', filename='js/custom.js') }}"></script>
+<!-- Google Map -->
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCh39n5U-4IoWpsVGUHWdqB6puEkhRLdmI&callback=myMap">
+</script>
+<!-- End Google Map -->
+<script type="text/javascript">
+  $(document).ready(function () {
+    // Handle clicking on "Start Now" button for image recognition
+    $('#image-start-now').click(function () {
+      // Send request to /image route for image recognition
+      $.post('/image', function (data) {
+        // Display response (replace with your logic)
+        alert(data);
+      });
+    });
+
+    // Handle clicking on "Start Now" button for video recognition
+    $('#video-start-now').click(function () {
+      // Send request to /video route for video recognition
+      $.post('/video', function (data) {
+        // Display response (replace with your logic)
+        alert(data);
+      });
+    });
+
+    // Handle clicking on "Start Now" button for live face recognition
+    $('#live-start-now').click(function () {
+      // Redirect to /live route for live face recognition
+      window.location.href = '/live';
+    });
+  });
+</script>
+<script type="text/javascript">
+  $(document).ready(function () {
+      // Handle clicking on "Start Now" button for image recognition
+      $('#image-start-now').click(function () {
+          // Send request to /image route for image recognition
+          $.post('/image', function (data) {
+              // Display response (replace with your logic)
+              alert(data);
+          });
+      });
+
+      // Handle clicking on "Start Now" button for video recognition
+      $('#video-start-now').click(function () {
+          // Send request to /video route for video recognition
+          $.post('/video', function (data) {
+              // Display response (replace with your logic)
+              alert(data);
+          });
+      });
+
+      // Handle clicking on "Start Now" button for live face recognition
+      $('#live-start-now').click(function () {
+          // Redirect to /live route for live face recognition
+          window.location.href = '/live';
+      });
+  });
+</script>
+
+</body>
+
+</html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='images/HD_logo.png') }}" type="">
+    <title>Image Recognition</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .intro-header {
+            background-image: url('static/images/background.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 100vh; /* Adjust to fit the content */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 600px;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background for better readability */
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        form {
+            margin-top: 20px;
+        }
+
+        input[type="file"] {
+            display: none; /* Hide the default file input */
+        }
+
+        .custom-file-upload, input[type="submit"] {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: all 0.3s ease; /* Adding transition for 3D effect */
+            margin: 10px; /* Adding margin for distance between buttons */
+        }
+
+        .custom-file-upload:hover, input[type="submit"]:hover {
+            background-color: #45a049;
+            transform: translateY(-2px); /* Add 3D effect on hover */
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Add shadow on hover */
+        }
+
+        #file-upload {
+            display: none; /* Hide the default file input */
+        }
+
+        .custom-file-upload::after {
+            content: 'Choose File';
+        }
+
+        #file-upload::after {
+            content: 'No file chosen';
+        }
+
+        .custom-file-upload:hover::after {
+            content: 'Choose File'; /* Reset content on hover */
+        }
+
+        #file-upload:hover::after {
+            content: 'No file chosen'; /* Reset content on hover */
+        }
+
+        #file-upload:not([value=""]):not(:hover)::after {
+            content: attr(value); /* Show uploaded file name */
+        }
+
+        #result {
+            margin-top: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header class="intro-header">
+        <div class="container">
+            <h1>Image Recognition</h1>
+            <form action="/image" method="POST" enctype="multipart/form-data">
+                <label for="file-upload" class="custom-file-upload"></label>
+                <input id="file-upload" type="file" name="file">
+                <input type="submit" value="Upload Image">
+            </form>
+            <div id="result"></div>
+        </div>
+    </header>
+</body>
+</html>

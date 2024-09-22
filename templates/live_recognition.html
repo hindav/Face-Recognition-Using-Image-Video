@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Live Face Recognition</title>
+    <style>
+      #video-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+      #video {
+        max-width: 100%;
+        max-height: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="video-container">
+      <video id="video" autoplay></video>
+    </div>
+    <script>
+      const video = document.getElementById('video');
+      const liveUrl = '/live';
+
+      function updateVideo() {
+        const xhr = new XMLHttpRequest();
+        xhr.open('GET', liveUrl, true);
+        xhr.responseType = 'arraybuffer';
+
+        xhr.onload = function() {
+          if (xhr.status === 200) {
+            const u8array = new Uint8Array(xhr.response);
+            const arrayBufferView = new Uint8ClampedArray(u8array);
+            const blob = new Blob([arrayBufferView], { type: 'image/jpeg' });
+            const url = URL.createObjectURL(blob);
+            video.src = url;
+          }
+        };
+
+        xhr.send();
+      }
+
+      setInterval(updateVideo, 100);
+    </script>
+  </body>
+</html>
