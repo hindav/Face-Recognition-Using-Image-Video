@@ -1,5 +1,7 @@
 # Face-Recognition-Using-Image-Video
 This application is basically a one-time model for predictions from images or video. Enable live tracking of movie characters for automated classification. Also utilize the system for real-time testing with live video or images of trained characters.
+.
+.
 ![](https://github.com/user-attachments/assets/0fdf2f42-6293-4412-96a6-1f3c681e385d)
 
 
