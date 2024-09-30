@@ -3,7 +3,10 @@
   "builds": [
     {
       "src": "app.py",
-      "use": "@vercel/python"
+      "use": "@vercel/python",
+      "config": {
+        "zeroConfig": true
+      }
     }
   ],
   "routes": [
@@ -13,6 +16,7 @@
     }
   ],
   "env": {
+    "PIP_NO_BUILD_ISOLATION": "false",
     "PYTHON_VERSION": "3.7"
   }
 }
