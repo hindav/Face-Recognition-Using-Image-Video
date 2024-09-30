@@ -1,7 +1,0 @@
-name: myenv
-channels:
-  - defaults
-dependencies:
-  - python=3.10
-  - pylint
-  # Add other dependencies here
