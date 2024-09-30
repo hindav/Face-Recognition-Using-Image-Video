@@ -13,6 +13,6 @@
     }
   ],
   "env": {
-    "PYTHON_VERSION": "3.7.16"
+    "PYTHON_VERSION": "3.7"
   }
 }
