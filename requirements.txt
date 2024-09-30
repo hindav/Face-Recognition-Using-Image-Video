@@ -107,3 +107,4 @@ zipp==3.15.0
 requests>=2.25.0
 selenium>=4.11.2
 urllib3>=1.26,<2.0
+pylint
