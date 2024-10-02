@@ -1,3 +1,3 @@
 face_recognition
 flask
-dlib==19.18.0
+
