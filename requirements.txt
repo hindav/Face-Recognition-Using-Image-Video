@@ -1,3 +1,6 @@
-face_recognition
-flask
-
+python==3.x
+flask==2.x
+opencv-python==4.x
+face_recognition==1.x
+numpy==1.x
+pickle==4.x
