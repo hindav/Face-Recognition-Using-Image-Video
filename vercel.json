@@ -3,20 +3,14 @@
   "builds": [
     {
       "src": "app.py",
-      "use": "@vercel/python",
-      "config": {
-        "zeroConfig": true
-      }
+      "use": "@vercel/python"
     }
   ],
+  "installCommand": "pip install Dlib-main/dlib-19.22.99-cp39-cp39-win_amd64.whl",
   "routes": [
     {
       "src": "/(.*)",
-      "dest": "/app.py"
+      "dest": "app.py"
     }
-  ],
-  "env": {
-    "PIP_NO_BUILD_ISOLATION": "false",
-    "PYTHON_VERSION": "3.7"
-  }
+  ]
 }
