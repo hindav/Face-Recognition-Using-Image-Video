@@ -1,4 +1,4 @@
-dlib/dlib.whl
+dlib/dlib-19.22.99-cp37-cp37m-win_amd64.whl
 flask
 opencv-python
 face_recognition
