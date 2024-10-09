@@ -6,7 +6,7 @@
       "use": "@vercel/python"
     }
   ],
-  "installCommand": "pip install Dlib-main/dlib-19.22.99-cp39-cp39-win_amd64.whl",
+  "installCommand": "pip install Dlib-main/dlib-19.22.99-cp39-cp39-win_amd64.whl && pip install -r requirements.txt",
   "routes": [
     {
       "src": "/(.*)",
